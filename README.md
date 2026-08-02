@@ -5,14 +5,23 @@ A data story built on kernel density estimation over GBIF occurrence records for
 whether the species' recorded range shifted between 1990 and 2024. Portfolio/exploratory
 project — not formal research, not peer reviewed.
 
-**Live:** https://s19835.github.io/magpie_range_shift/
-
 **Headline finding:** the density-weighted centroid moves **6.5 km net** over 34 years,
 never straying more than **9.7 km** from where it started — well within noise
 for a centroid computed from as few as 22 records in the early bins. Record counts grow
 ~90x over the same period, from 22 to 2,009 per bin. That growth is birders, not birds
 (see Known limitations below). Read the two facts separately: the story is not "the
 magpie moved," it's "the range looks stable and the sightings exploded."
+
+## Published
+
+| Page | URL | Source |
+| --- | --- | --- |
+| The story | https://magpie-story.vercel.app/ | this repo, deployed to Vercel — the local-assets variant, so the videos are served same-origin |
+| The story + technical note | https://s19835.github.io/magpie_range_shift/ | this repo, GitHub Pages |
+| The technical note, standalone | https://s19835.github.io/range-shift/ | [`s19835/range-shift`](https://github.com/s19835/range-shift) — the same page copied out as `index.html` |
+
+Some mobile carrier networks reset browser TLS connections to `*.github.io` — the whole
+domain, not this site. The Vercel URL is the fallback if the Pages links won't open.
 
 ## What's in this repo
 
