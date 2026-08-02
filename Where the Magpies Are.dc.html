@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Where the magpies are — Urocissa ornata, 1990–2024</title>
+<link rel="stylesheet" href="_ds/wilderness-design-system-185038eb-b7a4-4231-9fcc-dc208eef8707/tokens/colors.css">
+<link rel="stylesheet" href="_ds/wilderness-design-system-185038eb-b7a4-4231-9fcc-dc208eef8707/tokens/typography.css">
+<link rel="stylesheet" href="_ds/wilderness-design-system-185038eb-b7a4-4231-9fcc-dc208eef8707/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/wilderness-design-system-185038eb-b7a4-4231-9fcc-dc208eef8707/tokens/effects.css">
+<link rel="stylesheet" href="_ds/wilderness-design-system-185038eb-b7a4-4231-9fcc-dc208eef8707/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/wilderness-design-system-185038eb-b7a4-4231-9fcc-dc208eef8707/styles.css">
+<script src="_ds/wilderness-design-system-185038eb-b7a4-4231-9fcc-dc208eef8707/_ds_bundle.js"></script>
+<script src="data/density.js"></script>
+<style>
+  html, body { margin:0; padding:0; background:var(--surface-bg); overflow-x:hidden; transition:background 420ms cubic-bezier(.4,0,.2,1); }
+  body { -webkit-font-smoothing:antialiased; }
+  a { color:var(--text-accent); text-decoration:none; border-bottom:1px solid var(--accent-primary); transition:color 150ms cubic-bezier(.4,0,.2,1), border-color 150ms cubic-bezier(.4,0,.2,1); }
+  a:hover { color:var(--text-primary); border-bottom-color:var(--text-primary); }
+  ::selection { background:var(--gold-300); color:var(--ink-950); }
+  @keyframes drift { from { transform:scale(1.02) } to { transform:scale(1.12) } }
+  @keyframes cue { 0%,100% { transform:translateY(0); opacity:.5 } 50% { transform:translateY(7px); opacity:1 } }
+</style>
+</helmet>
+
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" fill="#0d1117"/><circle cx="256" cy="256" r="126" fill="none" stroke="#c9a86a" stroke-width="10"/><text x="256" y="298" text-anchor="middle" font-family="Georgia, serif" font-size="132" fill="#f4f1ea">UO</text></svg></template>
+
+<div style="background:var(--surface-bg); color:var(--text-secondary); font-family:var(--font-serif); transition:background 420ms cubic-bezier(.4,0,.2,1)">
+
+  <!-- FLOATING CHROME -->
+  <div style="position:fixed; top:clamp(12px,2.5vw,22px); right:clamp(12px,2.5vw,22px); z-index:40; display:flex; align-items:center; gap:12px">
+    <x-import component-from-global-scope="WildernessDesignSystem_185038.ThemeToggle" theme="{{ theme }}" on-change="{{ setTheme }}" hint-size="86px,34px"></x-import>
+  </div>
+  <div ref="{{ chipRef }}" style="position:fixed; right:clamp(12px,2.5vw,22px); bottom:clamp(12px,2.5vw,22px); z-index:40; opacity:0; transform:translateY(10px); transition:opacity 420ms cubic-bezier(.4,0,.2,1), transform 420ms cubic-bezier(.4,0,.2,1); pointer-events:none">
+    <x-import component-from-global-scope="WildernessDesignSystem_185038.ProgressIndicator" percent="{{ progress }}" label="Field note" hint-size="150px,84px"></x-import>
+  </div>
+
+  <!-- HERO — dark canvas holding an inset frame -->
+  <section style="background:var(--ink-950); padding:clamp(10px,1.6vw,18px); min-height:100svh; box-sizing:border-box; display:flex">
+    <div style="position:relative; flex:1; border-radius:var(--radius-xl); overflow:hidden; min-height:min(640px, 88svh); background:var(--ink-900)">
+      <div ref="{{ pxRef }}" data-px="0.10" style="position:absolute; inset:-14%">
+        <video data-src="https://d8j0ntlcm91z4.cloudfront.net/user_3HJLbGqNKNnD5l0xdrUg5kkpA1M/hf_20260801_144823_3db5dcfc-76a8-4322-90f3-5d1b9a736fd2.mp4" ref="{{ muteRef }}" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover"></video>
+      </div>
+      <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(13,17,23,.62) 0%, rgba(13,17,23,.22) 40%, rgba(13,17,23,.86) 100%)"></div>
+      <div style="position:absolute; inset:0; display:flex; flex-direction:column; justify-content:space-between; gap:32px; padding:clamp(22px, 4vw, 56px) clamp(22px, 5vw, 72px) clamp(32px, 6vw, 72px)">
+        <div style="font-family:var(--font-sans); font-size:clamp(9px,1.4vw,11px); font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--gold-400)">Wilderness · field note 04</div>
+        <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:clamp(20px,4vw,48px); flex-wrap:wrap">
+        <div ref="{{ revealRef }}" style="flex:1 1 380px; max-width:760px; opacity:0; transform:translateY(30px); transition:opacity 900ms cubic-bezier(.4,0,.2,1), transform 900ms cubic-bezier(.4,0,.2,1)">
+          <div style="font-family:var(--font-sans); font-size:clamp(9px,1.4vw,11px); font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:rgba(250,248,243,.62); margin-bottom:clamp(14px,2.4vw,24px)">Sri Lanka · wet zone · 1990–2024</div>
+          <h1 style="font-family:var(--font-serif); font-weight:400; font-size:clamp(38px, 6.4vw, 96px); line-height:1.05; letter-spacing:-.02em; color:var(--cream-50); margin:0 0 clamp(16px,2.6vw,26px); max-width:16ch; text-wrap:balance">
+            Did the blue magpie <em style="font-style:italic; color:var(--gold-400)">move</em>?
+          </h1>
+          <p style="font-family:var(--font-serif); font-size:clamp(16px, 1.5vw, 22px); line-height:1.7; color:rgba(250,248,243,.82); margin:0; max-width:52ch; text-wrap:pretty">
+            Ninety times more people saw it in the 2020s than in the 1990s. Its range barely
+            shifted. Here is how those two facts live together — and why the first one is not
+            about birds at all.
+          </p>
+          <div style="display:flex; align-items:center; gap:12px; margin-top:clamp(24px,4vw,42px); font-family:var(--font-sans); font-size:10px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:rgba(250,248,243,.6)">
+            <span style="animation:cue 2.4s ease-in-out infinite">↓</span> Begin the story
+          </div>
+        </div>
+        <div ref="{{ revealRef }}" style="flex:0 0 auto; background:rgba(13,17,23,.55); backdrop-filter:blur(16px); border-radius:var(--radius-md); box-shadow:var(--shadow-float); padding:14px 18px; color:var(--cream-50); font-family:var(--font-sans); opacity:0; transform:translateY(14px); transition:opacity 700ms cubic-bezier(.4,0,.2,1) 260ms, transform 700ms cubic-bezier(.4,0,.2,1) 260ms">
+          <div style="font-size:10px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; opacity:.72">Records</div>
+          <div ref="{{ countRef }}" style="font-family:var(--font-serif); font-size:clamp(26px,3vw,34px); line-height:1; margin-top:6px; font-variant-numeric:tabular-nums">3,620</div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE BIRD -->
+  <section style="max-width:1180px; margin:0 auto; padding:clamp(80px,10vw,132px) clamp(24px,6vw,64px) 0">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap:56px; align-items:center">
+      <figure style="margin:0; position:relative; aspect-ratio:16/9; border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-md); background:var(--ink-950)">
+        <div ref="{{ pxRef }}" data-px="0" style="position:absolute; inset:0">
+          <video data-src="https://d8j0ntlcm91z4.cloudfront.net/user_3HBbEePxjPvjVnH14jdsvDQfcFw/hf_20260801_101219_0ac9f8cb-ffa9-4007-be2b-02ea3f7d5570.mp4" ref="{{ muteRef }}" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover"></video>
+        </div>
+        <figcaption style="position:absolute; left:0; right:0; bottom:0; padding:34px 18px 14px; background:linear-gradient(to top, rgba(13,17,23,.85), transparent); color:var(--cream-50); font-family:var(--font-sans); font-size:10px; font-weight:600; letter-spacing:.16em; text-transform:uppercase">Urocissa ornata · reference render</figcaption>
+      </figure>
+      <div ref="{{ revealRef }}" style="opacity:0; transform:translateY(26px); transition:opacity 700ms cubic-bezier(.4,0,.2,1), transform 700ms cubic-bezier(.4,0,.2,1)">
+        <div style="font-family:var(--font-sans); font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--text-accent); margin-bottom:18px">The subject</div>
+        <h2 style="font-family:var(--font-serif); font-weight:400; font-size:clamp(30px, 3.2vw, 46px); line-height:1.14; letter-spacing:-.02em; margin:0 0 22px; color:var(--text-primary); text-wrap:balance">
+          A loud blue bird that lives in one wet corner of one island
+        </h2>
+        <p style="font-family:var(--font-serif); font-size:19px; line-height:1.7; color:var(--text-secondary); margin:0 0 18px; text-wrap:pretty">
+          The Sri Lanka blue magpie — <em style="color:var(--text-primary)">Urocissa ornata</em> — lives nowhere else on
+          Earth. It needs tall, wet, undisturbed rainforest, which on this island means a shrinking
+          band in the southwest. The IUCN lists it as Vulnerable.
+        </p>
+        <p style="font-family:var(--font-serif); font-size:19px; line-height:1.7; color:var(--text-secondary); margin:0; text-wrap:pretty">
+          So when a bird like this appears to be spreading, or retreating, people pay attention.
+          Which is exactly why it matters whether the pattern is real.
+        </p>
+        <div style="font-family:var(--font-sans); font-size:10px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--text-tertiary); margin-top:26px">Synthetic reference imagery · not a field photograph</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE QUESTION -->
+  <section style="max-width:1180px; margin:0 auto; padding:clamp(80px,10vw,132px) clamp(24px,6vw,64px) 0">
+    <div ref="{{ revealRef }}" style="border-top:1px solid var(--border-hairline); padding-top:54px; opacity:0; transform:translateY(26px); transition:opacity 700ms cubic-bezier(.4,0,.2,1), transform 700ms cubic-bezier(.4,0,.2,1)">
+      <p style="font-family:var(--font-serif); font-weight:400; font-size:clamp(28px, 3.4vw, 48px); line-height:1.28; letter-spacing:-.02em; color:var(--text-primary); margin:0; max-width:24ch; text-wrap:balance">
+        The question sounds simple. <em style="font-style:italic; color:var(--text-accent)">Has this bird's range moved in thirty-four years?</em>
+      </p>
+      <p style="font-family:var(--font-serif); font-size:19px; line-height:1.7; color:var(--text-secondary); margin:32px 0 0; max-width:62ch; text-wrap:pretty">
+        To answer it you need to know where the bird was, then, and where it is, now. Nobody
+        ran a thirty-four-year survey. What exists instead is a pile of sightings — birders,
+        researchers, tourists, each writing down a place and a date. Three thousand six hundred
+        and twenty of them.
+      </p>
+    </div>
+  </section>
+
+  <!-- THE EVIDENCE / EFFORT -->
+  <section style="max-width:1180px; margin:0 auto; padding:clamp(72px,9vw,120px) clamp(24px,6vw,64px) 0">
+    <div style="font-family:var(--font-sans); font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--text-accent); margin-bottom:18px">The evidence, honestly</div>
+    <h2 style="font-family:var(--font-serif); font-weight:400; font-size:clamp(30px, 3.2vw, 46px); line-height:1.14; letter-spacing:-.02em; margin:0 0 40px; color:var(--text-primary); max-width:22ch; text-wrap:balance">
+      Those sightings are not spread evenly. Not even close.
+    </h2>
+
+    <div ref="{{ revealRef }}" style="background:var(--surface-card); border-radius:var(--radius-md); box-shadow:var(--shadow-sm); padding:clamp(24px,3vw,38px); opacity:0; transform:translateY(26px); transition:opacity 700ms cubic-bezier(.4,0,.2,1), transform 700ms cubic-bezier(.4,0,.2,1)">
+      <div ref="{{ barsRef }}" style="display:flex; gap:clamp(4px,1.4vw,14px); align-items:flex-end; height:clamp(180px,34vw,280px); border-bottom:1px solid var(--border-strong)">
+        <sc-for list="{{ bins }}" as="b" hint-placeholder-count="7">
+          <div style="flex:1; display:flex; flex-direction:column; justify-content:flex-end; height:100%">
+            <div style="font-family:var(--font-sans); font-size:clamp(9px,1.5vw,14px); font-weight:600; text-align:center; margin-bottom:9px; color:{{ b.numColor }}; opacity:{{ b.numOpacity }}; transition:opacity 600ms cubic-bezier(.4,0,.2,1); transition-delay:{{ b.delay }}">{{ b.n }}</div>
+            <div style="background:{{ b.barColor }}; border-radius:var(--radius-sm) var(--radius-sm) 0 0; height:{{ b.barH }}; transition:height 820ms cubic-bezier(.4,0,.2,1), background 260ms cubic-bezier(.4,0,.2,1); transition-delay:{{ b.delay }}"></div>
+          </div>
+        </sc-for>
+      </div>
+      <div style="display:flex; gap:clamp(4px,1.4vw,14px); margin-top:10px">
+        <sc-for list="{{ bins }}" as="b" hint-placeholder-count="7">
+          <div style="flex:1; font-family:var(--font-sans); font-size:clamp(8px,1.3vw,11px); font-weight:500; text-align:center; color:var(--text-tertiary)">{{ b.short }}</div>
+        </sc-for>
+      </div>
+    </div>
+
+    <div ref="{{ revealRef }}" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap:56px; margin-top:48px; opacity:0; transform:translateY(26px); transition:opacity 700ms cubic-bezier(.4,0,.2,1), transform 700ms cubic-bezier(.4,0,.2,1)">
+      <p style="font-family:var(--font-serif); font-size:19px; line-height:1.7; color:var(--text-secondary); margin:0; text-wrap:pretty">
+        Twenty-two records in the early nineties. Two thousand and nine in the early twenties.
+        That is a <span style="font-family:var(--font-sans); font-weight:600; font-size:17px; color:var(--text-accent)">ninety-fold</span>
+        increase in evidence over three decades.
+      </p>
+      <p style="font-family:var(--font-serif); font-size:19px; line-height:1.7; color:var(--text-secondary); margin:0; text-wrap:pretty">
+        Nothing about that curve is a population curve. It is the arrival of smartphones, of
+        eBird, of ecotourism, of roads. It is a graph of <em style="color:var(--text-primary)">how hard we looked</em>.
+      </p>
+    </div>
+  </section>
+
+  <!-- THE MAP -->
+  <section style="max-width:1180px; margin:0 auto; padding:clamp(72px,9vw,120px) clamp(24px,6vw,64px) 0">
+    <div style="border-top:1px solid var(--border-hairline); padding-top:54px; display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap:56px; align-items:start">
+      <div ref="{{ revealRef }}" style="opacity:0; transform:translateY(26px); transition:opacity 700ms cubic-bezier(.4,0,.2,1), transform 700ms cubic-bezier(.4,0,.2,1)">
+        <div style="background:var(--surface-card); border-radius:var(--radius-md); box-shadow:var(--shadow-sm); padding:14px">
+          <div ref="{{ leadBoxRef }}" style="position:relative; width:100%; aspect-ratio:.672; border-radius:var(--radius-sm); overflow:hidden; background:var(--cream-50)">
+            <canvas ref="{{ leadRef }}" width="640" height="952" style="position:absolute; inset:0; width:100%; height:100%; display:block"></canvas>
+            <div style="position:absolute; right:12px; top:12px; background:rgba(13,17,23,.55); backdrop-filter:blur(16px); border-radius:var(--radius-pill); padding:6px 14px; font-family:var(--font-sans); font-size:12px; font-weight:600; letter-spacing:.06em; color:var(--cream-50)">{{ activeLabel }}</div>
+            <div style="position:absolute; left:14px; bottom:14px">
+              <div style="width:52px; height:1px; background:rgba(13,17,23,.55); margin-bottom:5px"></div>
+              <div style="font-family:var(--font-sans); font-size:9.5px; font-weight:600; letter-spacing:.16em; color:rgba(13,17,23,.6)">12 KM</div>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; gap:14px; margin-top:14px">
+            <button onClick="{{ togglePlay }}" style="font-family:var(--font-sans); font-size:11px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-950); background:var(--accent-primary); border:none; border-radius:var(--radius-pill); padding:10px 20px; cursor:pointer; transition:transform 150ms cubic-bezier(.4,0,.2,1), background 150ms cubic-bezier(.4,0,.2,1)" style-hover="transform:translateY(-1px); background:var(--accent-primary-strong)">{{ playLabel }}</button>
+            <div style="display:flex; gap:5px; flex:1">
+              <sc-for list="{{ bins }}" as="b" hint-placeholder-count="7">
+                <div onClick="{{ b.select }}" style="flex:1; cursor:pointer; height:3px; border-radius:var(--radius-pill); background:{{ b.tickColor }}"></div>
+              </sc-for>
+            </div>
+            <span style="font-family:var(--font-sans); font-size:11px; font-weight:500; color:var(--text-tertiary); white-space:nowrap">n = {{ activeN }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div ref="{{ revealRef }}" style="opacity:0; transform:translateY(26px); transition:opacity 700ms cubic-bezier(.4,0,.2,1) 90ms, transform 700ms cubic-bezier(.4,0,.2,1) 90ms">
+        <div style="font-family:var(--font-sans); font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--text-accent); margin-bottom:18px">What the sightings look like</div>
+        <h2 style="font-family:var(--font-serif); font-weight:400; font-size:clamp(30px, 3.2vw, 46px); line-height:1.14; letter-spacing:-.02em; margin:0 0 22px; color:var(--text-primary); max-width:20ch; text-wrap:balance">
+          Smudge each sighting into a cloud, and a shape appears
+        </h2>
+        <p style="font-family:var(--font-serif); font-size:19px; line-height:1.7; color:var(--text-secondary); margin:0 0 18px; text-wrap:pretty">
+          A single dot on a map tells you almost nothing. So each sighting is blurred into a
+          small cloud — about a kilometre wide — and all the clouds are added together. Dark
+          means many overlapping sightings. Pale means few or none.
+        </p>
+        <p style="font-family:var(--font-serif); font-size:19px; line-height:1.7; color:var(--text-secondary); margin:0 0 18px; text-wrap:pretty">
+          Press play and watch thirty-four years pass. The early frames are grainy on purpose:
+          when a map rests on twenty-two sightings, it should not look as confident as one
+          resting on two thousand.
+        </p>
+        <p style="font-family:var(--font-serif); font-size:19px; line-height:1.7; color:var(--text-secondary); margin:0; text-wrap:pretty">
+          What you are watching fill in is not a bird spreading out. It is a map being
+          discovered.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FULL BLEED BREAK -->
+  <section style="position:relative; margin-top:clamp(72px,9vw,120px); height:clamp(360px,74vh,760px); overflow:hidden; background:var(--ink-950)">
+    <div ref="{{ pxRef }}" data-px="0" style="position:absolute; inset:0">
+      <video data-src="https://d8j0ntlcm91z4.cloudfront.net/user_3HJLbGqNKNnD5l0xdrUg5kkpA1M/hf_20260801_150906_3310fea2-c2d4-4e39-b8da-2805f2ab5853.mp4" ref="{{ muteRef }}" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover"></video>
+    </div>
+    <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(13,17,23,.28) 0%, rgba(13,17,23,.78) 100%)"></div>
+    <div style="position:absolute; inset:0; display:flex; align-items:flex-end; padding:0 clamp(24px,6vw,64px) clamp(40px,9vh,120px); max-width:1400px; margin:0 auto">
+      <blockquote ref="{{ quoteRef }}" style="margin:0; padding:4px 0 4px clamp(14px,2.4vw,24px); border-left:2px solid var(--gold-500); font-family:var(--font-serif); font-style:italic; font-weight:400; font-size:clamp(22px, 3.4vw, 48px); line-height:1.25; letter-spacing:-.015em; color:var(--cream-50); max-width:20ch; text-wrap:balance; opacity:0; transform:translateY(28px); transition:opacity 1100ms cubic-bezier(.4,0,.2,1), transform 1100ms cubic-bezier(.4,0,.2,1)">
+        “More sightings means more people looking. It does not mean more birds.”
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- THE ANSWER -->
+  <section style="max-width:1180px; margin:0 auto; padding:clamp(72px,9vw,120px) clamp(24px,6vw,64px) 0">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap:56px; align-items:center">
+      <div ref="{{ revealRef }}" style="opacity:0; transform:translateY(26px); transition:opacity 700ms cubic-bezier(.4,0,.2,1), transform 700ms cubic-bezier(.4,0,.2,1)">
+        <div style="font-family:var(--font-sans); font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--text-accent); margin-bottom:18px">The answer</div>
+        <h2 style="font-family:var(--font-serif); font-weight:400; font-size:clamp(30px, 3.2vw, 46px); line-height:1.14; letter-spacing:-.02em; margin:0 0 24px; color:var(--text-primary); max-width:20ch; text-wrap:balance">
+          In thirty-four years, the centre of gravity moved about as far as you could walk in a morning
+        </h2>
+        <p style="font-family:var(--font-serif); font-size:19px; line-height:1.7; color:var(--text-secondary); margin:0 0 18px; text-wrap:pretty">
+          Take every sighting in a five-year window and find its balance point — the place the
+          map would tip on. Track that point across seven windows and it wanders
+          <span style="font-family:var(--font-sans); font-weight:600; font-size:17px; color:var(--text-accent)">{{ netKm }} km</span>
+          from start to finish, never straying more than
+          <span style="font-family:var(--font-sans); font-weight:600; font-size:17px; color:var(--text-accent)">{{ maxKm }} km</span> from where it began.
+        </p>
+        <p style="font-family:var(--font-serif); font-size:19px; line-height:1.7; color:var(--text-secondary); margin:0; text-wrap:pretty">
+          On a map of the whole study area that movement is invisible — you have to magnify a
+          16-kilometre box nine times before it becomes a picture at all. And the earliest
+          points, the ones drawn from a handful of sightings, could sit anywhere. This is
+          wobble, not migration.
+        </p>
+      </div>
+
+      <div ref="{{ revealRef }}" style="opacity:0; transform:translateY(26px); transition:opacity 700ms cubic-bezier(.4,0,.2,1) 90ms, transform 700ms cubic-bezier(.4,0,.2,1) 90ms">
+        <div style="background:var(--surface-card); border-radius:var(--radius-md); box-shadow:var(--shadow-sm); padding:14px">
+          <div ref="{{ trailRef }}" style="position:relative; width:100%; aspect-ratio:1; border-radius:var(--radius-sm); overflow:hidden; background:var(--cream-50)">
+            <svg viewBox="-8 -8 16 16" style="position:absolute; inset:0; width:100%; height:100%">
+              <sc-for list="{{ gridLines }}" as="g" hint-placeholder-count="14">
+                <line x1="{{ g.x1 }}" y1="{{ g.y1 }}" x2="{{ g.x2 }}" y2="{{ g.y2 }}" stroke="rgba(13,17,23,.09)" stroke-width="1" vector-effect="non-scaling-stroke"></line>
+              </sc-for>
+              <path d="{{ trailPath }}" fill="none" stroke="rgba(13,17,23,.34)" stroke-width="1.2" vector-effect="non-scaling-stroke" stroke-dasharray="3 3" opacity="{{ dottedTrailOpacity }}" style="transition:opacity 520ms cubic-bezier(.4,0,.2,1)"></path>
+              <sc-for list="{{ trailSegs }}" as="s" hint-placeholder-count="6">
+                <line x1="{{ s.x1 }}" y1="{{ s.y1 }}" x2="{{ s.x2 }}" y2="{{ s.y2 }}" stroke="rgba(13,17,23,.34)" stroke-width="1.2" stroke-linecap="round" vector-effect="non-scaling-stroke" stroke-dasharray="{{ s.dash }}" stroke-dashoffset="{{ s.offset }}" opacity="{{ solidTrailOpacity }}" style="transition:stroke-dashoffset 420ms cubic-bezier(.4,0,.2,1), opacity 520ms cubic-bezier(.4,0,.2,1); transition-delay:{{ s.delay }}, 0ms"></line>
+              </sc-for>
+              <sc-for list="{{ centroids }}" as="c" hint-placeholder-count="7">
+                <g opacity="{{ c.appear }}" style="transition:opacity 520ms cubic-bezier(.4,0,.2,1); transition-delay:{{ c.delay }}">
+                  <circle cx="{{ c.x }}" cy="{{ c.y }}" r="{{ c.r }}" fill="{{ c.fill }}" stroke="{{ c.stroke }}" stroke-width="1.1" vector-effect="non-scaling-stroke" style="transition:r 560ms cubic-bezier(.4,0,.2,1), fill 260ms cubic-bezier(.4,0,.2,1), stroke 260ms cubic-bezier(.4,0,.2,1); transition-delay:{{ c.delay }}, 0ms, 0ms"></circle>
+                  <circle cx="{{ c.x }}" cy="{{ c.y }}" r="0.09" fill="#0d1117"></circle>
+                </g>
+              </sc-for>
+            </svg>
+            <sc-for list="{{ centroids }}" as="c" hint-placeholder-count="7">
+              <div style="position:absolute; font-family:var(--font-sans); font-size:10px; font-weight:600; letter-spacing:.06em; white-space:nowrap; pointer-events:none; color:{{ c.labColor }}; left:{{ c.lx }}%; top:{{ c.ly }}%; opacity:{{ c.appear }}; transition:opacity 520ms cubic-bezier(.4,0,.2,1); transition-delay:{{ c.delay }}">{{ c.short }}</div>
+            </sc-for>
+            <div style="position:absolute; left:14px; bottom:14px">
+              <div style="width:31.2%; height:1px; background:rgba(13,17,23,.5); margin-bottom:5px"></div>
+              <div style="font-family:var(--font-sans); font-size:9.5px; font-weight:600; letter-spacing:.16em; color:rgba(13,17,23,.55)">5 KM</div>
+            </div>
+          </div>
+        </div>
+        <div style="font-family:var(--font-sans); font-size:10px; font-weight:500; letter-spacing:.1em; color:var(--text-tertiary); margin-top:12px">
+          16 × 16 km · circle size shows how many sightings stand behind each point
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY IT MATTERS -->
+  <section style="max-width:1180px; margin:0 auto; padding:clamp(72px,9vw,120px) clamp(24px,6vw,64px) 0">
+    <div style="border-top:1px solid var(--border-hairline); padding-top:54px">
+      <h2 style="font-family:var(--font-serif); font-weight:400; font-size:clamp(30px, 3.2vw, 46px); line-height:1.14; letter-spacing:-.02em; margin:0 0 44px; color:var(--text-primary); max-width:24ch; text-wrap:balance">
+        Why bother saying nothing happened?
+      </h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap:24px">
+        <div ref="{{ revealRef }}" style="background:var(--surface-card); border-radius:var(--radius-md); box-shadow:var(--shadow-sm); padding:32px; opacity:0; transform:translateY(26px); transition:opacity 700ms cubic-bezier(.4,0,.2,1), transform 700ms cubic-bezier(.4,0,.2,1)">
+          <div style="font-family:var(--font-sans); font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--text-accent); margin-bottom:14px">Because the shape is seductive</div>
+          <p style="font-family:var(--font-serif); font-size:17px; line-height:1.7; color:var(--text-secondary); margin:0; text-wrap:pretty">
+            Run the same data through a model that ignores effort and you get a confident story
+            about expansion. It would be publishable. It would also be an artefact of
+            birdwatchers buying phones.
+          </p>
+        </div>
+        <div ref="{{ revealRef }}" style="background:var(--surface-card); border-radius:var(--radius-md); box-shadow:var(--shadow-sm); padding:32px; opacity:0; transform:translateY(26px); transition:opacity 700ms cubic-bezier(.4,0,.2,1) 110ms, transform 700ms cubic-bezier(.4,0,.2,1) 110ms">
+          <div style="font-family:var(--font-sans); font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--text-accent); margin-bottom:14px">Because decisions follow</div>
+          <p style="font-family:var(--font-serif); font-size:17px; line-height:1.7; color:var(--text-secondary); margin:0; text-wrap:pretty">
+            Range maps feed protected-area boundaries and threat assessments. A false expansion
+            makes a vulnerable species look safer than it is.
+          </p>
+        </div>
+        <div ref="{{ revealRef }}" style="background:var(--surface-card); border-radius:var(--radius-md); box-shadow:var(--shadow-sm); padding:32px; opacity:0; transform:translateY(26px); transition:opacity 700ms cubic-bezier(.4,0,.2,1) 220ms, transform 700ms cubic-bezier(.4,0,.2,1) 220ms">
+          <div style="font-family:var(--font-sans); font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--text-accent); margin-bottom:14px">Because the fix is known</div>
+          <p style="font-family:var(--font-serif); font-size:17px; line-height:1.7; color:var(--text-secondary); margin:0; text-wrap:pretty">
+            Effort-corrected models, repeat surveys along fixed routes, detection probabilities.
+            None of it is exotic. It just has to be done before the map is drawn, not after.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSE -->
+  <section style="max-width:1180px; margin:clamp(72px,9vw,120px) auto 0; padding:0 clamp(24px,6vw,64px)">
+    <div ref="{{ revealRef }}" style="background:var(--ink-950); border-radius:var(--radius-lg); box-shadow:var(--shadow-lg); padding:clamp(40px, 6vw, 84px); opacity:0; transform:translateY(26px); transition:opacity 700ms cubic-bezier(.4,0,.2,1), transform 700ms cubic-bezier(.4,0,.2,1)">
+      <div style="width:44px; height:2px; background:var(--gold-500); margin-bottom:34px"></div>
+      <p style="font-family:var(--font-serif); font-weight:400; font-size:clamp(24px, 2.8vw, 40px); line-height:1.3; letter-spacing:-.02em; margin:0 0 30px; max-width:26ch; color:var(--cream-50); text-wrap:balance">
+        The honest headline is the boring one: a stable core around Sinharaja, and a record set
+        that grew up around it.
+      </p>
+      <p style="font-family:var(--font-serif); font-size:18px; line-height:1.7; color:rgba(250,248,243,.72); margin:0; max-width:62ch; text-wrap:pretty">
+        That is not a failure of the analysis. It is the analysis working — refusing to turn
+        thirty-four years of uneven attention into a story about a bird that never asked to be
+        counted.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="max-width:1180px; margin:0 auto; padding:44px clamp(24px,6vw,64px) 90px; display:flex; gap:24px; flex-wrap:wrap; font-family:var(--font-sans); font-size:11px; font-weight:500; letter-spacing:.06em; color:var(--text-tertiary)">
+    <span>3,620 records · 7 five-year bins · gaussian KDE, bandwidth 0.90 km</span>
+    <span>Habitat and bird imagery is synthetic and illustrative — no field photographs</span>
+    <span style="margin-left:auto"><a href="Range Shift - Urocissa ornata.dc.html">Read the technical note →</a></span>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;initialTheme&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;light&quot;,&quot;dark&quot;],&quot;default&quot;:&quot;light&quot;,&quot;tsType&quot;:&quot;'light' | 'dark'&quot;,&quot;section&quot;:&quot;Appearance&quot;},&quot;autoplayTimeline&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Behaviour&quot;}}">
+const PAPER = [250, 248, 243];
+const RAMP = [
+  [0, PAPER],
+  [0.05, [236, 230, 216]],
+  [0.17, [199, 187, 154]],
+  [0.34, [124, 145, 132]],
+  [0.55, [92, 122, 110]],
+  [0.78, [60, 82, 73]],
+  [1, [13, 17, 23]]
+];
+const KM_LAT = 110.57, KM_LON = 110.54;
+
+function rampAt(stops, t) {
+  if (t <= stops[0][0]) return stops[0][1];
+  for (let i = 1; i < stops.length; i++) {
+    if (t <= stops[i][0]) {
+      const [p0, c0] = stops[i - 1], [p1, c1] = stops[i];
+      const f = (t - p0) / (p1 - p0 || 1);
+      return [c0[0] + (c1[0] - c0[0]) * f, c0[1] + (c1[1] - c0[1]) * f, c0[2] + (c1[2] - c0[2]) * f];
+    }
+  }
+  return stops[stops.length - 1][1];
+}
+
+class Component extends DCLogic {
+  state = { loaded: false, active: 0, playing: false, theme: 'light', progress: 0, barsIn: false };
+  els = {};
+  refFns = {};
+  leadCache = {};
+
+  componentDidMount() {
+    const t = this.props.initialTheme || 'light';
+    document.documentElement.setAttribute('data-theme', t);
+    this.setState({ theme: t });
+
+    this.onScroll = () => {
+      this.updateParallax();
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      const p = h > 0 ? Math.round(Math.min(1, Math.max(0, window.scrollY / h)) * 100) : 0;
+      if (p !== this.state.progress) this.setState({ progress: p });
+      const chip = this.els.chip;
+      if (chip) {
+        const on = window.scrollY > window.innerHeight * 0.6;
+        chip.style.opacity = on ? '1' : '0';
+        chip.style.transform = on ? 'translateY(0)' : 'translateY(10px)';
+      }
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    window.addEventListener('resize', this.onScroll);
+    this.onScroll();
+
+    const load = window.__DENSITY__
+      ? Promise.resolve(JSON.parse(JSON.stringify(window.__DENSITY__)))
+      : fetch('data/density.json').then(r => r.json());
+    load.then(d => {
+      d.bins.forEach(b => {
+        const raw = atob(b.g), u = new Uint8Array(raw.length);
+        for (let i = 0; i < raw.length; i++) u[i] = raw.charCodeAt(i);
+        b.grid = u;
+      });
+      this.data = d;
+      const N = d.grid.n;
+      this.noise = new Float32Array(N * N);
+      const bayer = [0,8,2,10,12,4,14,6,3,11,1,9,15,7,13,5];
+      for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) {
+        const h = Math.abs(Math.sin(x * 12.9898 + y * 78.233) * 43758.5453) % 1;
+        this.noise[y * N + x] = 0.55 * (bayer[(y % 4) * 4 + (x % 4)] / 16) + 0.45 * h;
+      }
+      this.setState({ loaded: true });
+    });
+  }
+
+  componentDidUpdate() { this.paintLead(); }
+  componentWillUnmount() {
+    clearInterval(this.timer);
+    cancelAnimationFrame(this.dz);
+    window.removeEventListener('scroll', this.onScroll);
+    window.removeEventListener('resize', this.onScroll);
+    cancelAnimationFrame(this.pxRaf);
+    clearTimeout(this.trailTimer);
+    if (this.io) this.io.disconnect();
+  }
+
+  pxEls = [];
+
+  pxRef = el => {
+    if (!el || el.__px) return;
+    el.__px = true;
+    el.style.willChange = 'transform';
+    this.pxEls.push(el);
+    this.updateParallax();
+  };
+
+  updateParallax = () => {
+    if (this.pxRaf) return;
+    this.pxRaf = requestAnimationFrame(() => {
+      this.pxRaf = null;
+      const vh = window.innerHeight;
+      this.pxEls.forEach(el => {
+        const r = el.getBoundingClientRect();
+        if (r.bottom < -vh || r.top > vh * 2) return;
+        const speed = parseFloat(el.dataset.px || '0.1');
+        const scale = parseFloat(el.dataset.pxScale || '1');
+        const off = ((r.top + r.height / 2) - vh / 2) * speed;
+        el.style.transform = 'translate3d(0,' + off.toFixed(1) + 'px,0)' + (scale !== 1 ? ' scale(' + scale + ')' : '');
+      });
+    });
+  };
+
+  revealRef = el => {
+    if (!el || el.__rv) return;
+    el.__rv = true;
+    const show = () => { el.style.opacity = '1'; el.style.transform = 'none'; };
+    if (!('IntersectionObserver' in window)) return show();
+    const io = new IntersectionObserver(es => {
+      es.forEach(e => { if (e.isIntersecting) { show(); io.unobserve(el); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    io.observe(el);
+  };
+
+  trailRef = el => {
+    if (!el || el.__tr) return;
+    el.__tr = true;
+    const run = () => {
+      this.setState({ trailIn: true });
+      this.trailTimer = setTimeout(() => this.setState({ trailDone: true }), 2150);
+    };
+    if (!('IntersectionObserver' in window)) return run();
+    const io = new IntersectionObserver(es => {
+      es.forEach(e => { if (e.isIntersecting) { run(); io.unobserve(el); } });
+    }, { threshold: 0.35 });
+    io.observe(el);
+  };
+
+  barsRef = el => {
+    if (!el || el.__bs) return;
+    el.__bs = true;
+    if (!('IntersectionObserver' in window)) return this.setState({ barsIn: true });
+    const io = new IntersectionObserver(es => {
+      es.forEach(e => { if (e.isIntersecting) { this.setState({ barsIn: true }); io.unobserve(el); } });
+    }, { threshold: 0.3 });
+    io.observe(el);
+  };
+
+  countRef = el => {
+    if (!el || el.__ct) return;
+    el.__ct = true;
+    const target = 3620, dur = 1700;
+    el.textContent = '0';
+    const t0 = performance.now() + 420;
+    const step = now => {
+      const r = Math.min(1, Math.max(0, (now - t0) / dur));
+      const e = 1 - Math.pow(1 - r, 3);
+      el.textContent = Math.round(target * e).toLocaleString();
+      if (r < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+
+  muteRef = el => {
+    if (!el || el.__muted) return;
+    el.__muted = true;
+    if (el.dataset.src && !el.src) el.src = el.dataset.src;
+    const hush = () => {
+      el.defaultMuted = true;
+      el.muted = true;
+      el.volume = 0;
+      if (el.audioTracks) { for (let i = 0; i < el.audioTracks.length; i++) el.audioTracks[i].enabled = false; }
+    };
+    hush();
+    ['loadedmetadata', 'loadeddata', 'canplay', 'play', 'playing', 'volumechange'].forEach(ev => el.addEventListener(ev, hush));
+    el.play().catch(() => {});
+  };
+
+  setTheme = t => {
+    const next = (t === 'light' || t === 'dark') ? t : (this.state.theme === 'light' ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', next);
+    this.setState({ theme: next });
+  };
+
+  cert(n) { return Math.min(1, Math.sqrt(n / 500)); }
+
+  drawInto(el, valAt, cert, pts, levels) {
+    if (!el || !this.data) return;
+    const d = this.data, N = d.grid.n;
+    const W = el.width, H = el.height;
+    const ctx = el.getContext('2d'), img = ctx.createImageData(W, H), a = img.data;
+    const vg = (x, y) => valAt((N - 1 - y) * N + x);
+    for (let y = 0; y < H; y++) {
+      const fy = (y + 0.5) / H * (N - 1), y0 = Math.min(N - 2, Math.floor(fy)), ty = fy - y0;
+      for (let x = 0; x < W; x++) {
+        const fx = (x + 0.5) / W * (N - 1), x0 = Math.min(N - 2, Math.floor(fx)), tx = fx - x0;
+        const v00 = vg(x0, y0), v10 = vg(x0 + 1, y0), v01 = vg(x0, y0 + 1), v11 = vg(x0 + 1, y0 + 1);
+        const t = (v00 * (1 - tx) + v10 * tx) * (1 - ty) + (v01 * (1 - tx) + v11 * tx) * ty;
+        let c = rampAt(RAMP, t);
+        if (cert < 1 && this.noise[(y0 >> 2) * N + (x0 >> 2)] > cert) {
+          const k = 0.10 + 0.18 * t;
+          c = [PAPER[0] + (c[0] - PAPER[0]) * k, PAPER[1] + (c[1] - PAPER[1]) * k, PAPER[2] + (c[2] - PAPER[2]) * k];
+        }
+        const o = (y * W + x) * 4;
+        a[o] = c[0]; a[o + 1] = c[1]; a[o + 2] = c[2]; a[o + 3] = 255;
+      }
+    }
+    ctx.putImageData(img, 0, 0);
+
+    if (levels) {
+      const sx = W / (N - 1), sy = H / (N - 1);
+      ctx.lineJoin = 'round';
+      levels.forEach((lv, li) => {
+        ctx.beginPath();
+        for (let y = 0; y < N - 1; y++) {
+          for (let x = 0; x < N - 1; x++) {
+            const tl = vg(x, y), tr = vg(x + 1, y), br = vg(x + 1, y + 1), bl = vg(x, y + 1);
+            if (tl < lv && tr < lv && br < lv && bl < lv) continue;
+            if (tl >= lv && tr >= lv && br >= lv && bl >= lv) continue;
+            const idx = (tl > lv ? 8 : 0) | (tr > lv ? 4 : 0) | (br > lv ? 2 : 0) | (bl > lv ? 1 : 0);
+            const T = () => [(x + (lv - tl) / (tr - tl)) * sx, y * sy];
+            const R = () => [(x + 1) * sx, (y + (lv - tr) / (br - tr)) * sy];
+            const B = () => [(x + (lv - bl) / (br - bl)) * sx, (y + 1) * sy];
+            const L = () => [x * sx, (y + (lv - tl) / (bl - tl)) * sy];
+            const seg = (p, q) => { ctx.moveTo(p[0], p[1]); ctx.lineTo(q[0], q[1]); };
+            switch (idx) {
+              case 1: case 14: seg(L(), B()); break;
+              case 2: case 13: seg(B(), R()); break;
+              case 3: case 12: seg(L(), R()); break;
+              case 4: case 11: seg(T(), R()); break;
+              case 6: case 9:  seg(T(), B()); break;
+              case 7: case 8:  seg(L(), T()); break;
+              case 5: seg(L(), T()); seg(B(), R()); break;
+              case 10: seg(T(), R()); seg(L(), B()); break;
+            }
+          }
+        }
+        const alpha = (0.18 + 0.14 * li) * (cert < 1 ? 0.45 + 0.55 * cert : 1);
+        ctx.strokeStyle = 'rgba(13,17,23,' + alpha.toFixed(3) + ')';
+        ctx.lineWidth = 1.1;
+        ctx.stroke();
+      });
+    }
+
+    if (pts) {
+      ctx.fillStyle = 'rgba(13,17,23,0.5)';
+      const g = d.grid;
+      pts.forEach(pt => {
+        const x = (pt[1] - g.lon0) / (g.lon1 - g.lon0) * W;
+        const y = (1 - (pt[0] - g.lat0) / (g.lat1 - g.lat0)) * H;
+        ctx.fillRect(x - 0.75, y - 0.75, 1.5, 1.5);
+      });
+    }
+  }
+
+  crossfade(snap) {
+    const el = this.els.lead; if (!el) return;
+    const cur = document.createElement('canvas');
+    cur.width = el.width; cur.height = el.height;
+    cur.getContext('2d').drawImage(el, 0, 0);
+    cancelAnimationFrame(this.dz);
+    const ctx = el.getContext('2d'), t0 = performance.now(), dur = 420;
+    const step = now => {
+      const r = Math.min(1, (now - t0) / dur), t = r * r * (3 - 2 * r);
+      ctx.globalAlpha = 1; ctx.drawImage(snap, 0, 0);
+      ctx.globalAlpha = t; ctx.drawImage(cur, 0, 0);
+      ctx.globalAlpha = 1;
+      if (r < 1) this.dz = requestAnimationFrame(step);
+    };
+    this.dz = requestAnimationFrame(step);
+  }
+
+  paintLead(force) {
+    const d = this.data, el = this.els.lead;
+    if (!d || !el) return;
+    const sig = String(this.state.active);
+    if (!force && sig === this.sigLead) return;
+    const first = this.sigLead === undefined;
+    this.sigLead = sig;
+    let snap = null;
+    if (!first) {
+      snap = document.createElement('canvas');
+      snap.width = el.width; snap.height = el.height;
+      snap.getContext('2d').drawImage(el, 0, 0);
+    }
+    const ctx = el.getContext('2d');
+    ctx.globalAlpha = 1;
+    const cached = this.leadCache[this.state.active];
+    if (cached) ctx.drawImage(cached, 0, 0);
+    else {
+      const bin = d.bins[this.state.active];
+      this.drawInto(el, j => bin.grid[j] / 255, this.cert(bin.n), bin.points, [0.32, 0.55, 0.78]);
+      const cp = document.createElement('canvas');
+      cp.width = el.width; cp.height = el.height;
+      cp.getContext('2d').drawImage(el, 0, 0);
+      this.leadCache[this.state.active] = cp;
+    }
+    if (snap) this.crossfade(snap);
+  }
+
+  ref(key) {
+    if (!this.refFns[key]) this.refFns[key] = el => {
+      if (!el) return;
+      this.els[key] = el;
+      if (key === 'lead') requestAnimationFrame(() => this.paintLead(true));
+      if (key === 'leadBox' && !this.io && 'IntersectionObserver' in window) {
+        this.io = new IntersectionObserver(es => {
+          es.forEach(e => {
+            if (e.isIntersecting && !this.autoRan && (this.props.autoplayTimeline ?? true)) {
+              this.autoRan = true; this.play();
+            }
+          });
+        }, { threshold: 0.45 });
+        this.io.observe(el);
+      }
+    };
+    return this.refFns[key];
+  }
+
+  play() {
+    clearInterval(this.timer);
+    this.timer = setInterval(() => {
+      this.setState(s => {
+        if (s.active >= 6) { clearInterval(this.timer); return { active: 6, playing: false }; }
+        return { active: s.active + 1 };
+      });
+    }, 1100);
+    this.setState({ playing: true });
+  }
+
+  togglePlay = () => {
+    if (this.state.playing) { clearInterval(this.timer); this.setState({ playing: false }); return; }
+    if (this.state.active >= 6) this.setState({ active: 0 });
+    this.play();
+  };
+
+  select(i) { clearInterval(this.timer); this.setState({ active: i, playing: false }); }
+
+  renderVals() {
+    const d = this.data;
+    const dark = this.state.theme === 'dark';
+    const labels = ['1990–1994','1995–1999','2000–2004','2005–2009','2010–2014','2015–2019','2020–2024'];
+    const ns = d ? d.bins.map(b => b.n) : [22,29,70,140,341,1009,2009];
+    const act = this.state.active;
+
+    const bins = labels.map((label, i) => {
+      const on = i === act, seen = i <= act, last = i === 6;
+      return {
+        short: label.slice(2, 4) + '–' + label.slice(-2),
+        n: ns[i].toLocaleString(),
+        delay: (i * 90) + 'ms',
+        numOpacity: this.state.barsIn ? 1 : 0,
+        barH: this.state.barsIn ? (ns[i] / 2009 * 87).toFixed(1) + '%' : '0%',
+        barColor: last ? '#c9a86a' : (dark ? 'rgba(250,248,243,.22)' : 'rgba(13,17,23,.16)'),
+        numColor: last ? 'var(--text-accent)' : 'var(--text-tertiary)',
+        tickColor: on ? '#c9a86a' : (seen ? 'var(--border-strong)' : 'var(--border-hairline)'),
+        select: () => this.select(i)
+      };
+    });
+
+    let cents = [], netKm = '6.5', maxKm = '9.7';
+    if (d) {
+      const la = d.bins.map(b => b.clat), lo = d.bins.map(b => b.clon);
+      const cLat = (Math.min.apply(null, la) + Math.max.apply(null, la)) / 2;
+      const cLon = (Math.min.apply(null, lo) + Math.max.apply(null, lo)) / 2;
+      const c0 = d.bins[0];
+      const km = (a, b) => Math.hypot((a.clat - b.clat) * KM_LAT, (a.clon - b.clon) * KM_LON);
+      cents = d.bins.map((b, i) => {
+        const x = (b.clon - cLon) * KM_LON, y = (cLat - b.clat) * KM_LAT;
+        const r = 0.30 + Math.sqrt(b.n) / Math.sqrt(2009) * 1.45;
+        const on = i === act, showLab = i === 0 || i === 6 || on;
+        return {
+          short: showLab ? labels[i].slice(0, 4) : '',
+          delay: (i * 260 + 260) + 'ms',
+          appear: this.state.trailIn ? 1 : 0,
+          x: +x.toFixed(3), y: +y.toFixed(3), r: this.state.trailIn ? +r.toFixed(3) : 0,
+          lx: ((x + 8) / 16 * 100 + 1.6).toFixed(2),
+          ly: ((y + 8) / 16 * 100 - 3.4).toFixed(2),
+          labColor: on ? '#a8823f' : 'rgba(13,17,23,.55)',
+          fill: on ? 'rgba(201,168,106,.28)' : 'rgba(13,17,23,.04)',
+          stroke: on ? '#a8823f' : 'rgba(13,17,23,.3)'
+        };
+      });
+      netKm = km(d.bins[6], c0).toFixed(1);
+      maxKm = Math.max.apply(null, d.bins.map(b => km(b, c0))).toFixed(1);
+    }
+
+    const gl = [];
+    for (let k = -6; k <= 6; k += 2) {
+      gl.push({ x1: k, y1: -8, x2: k, y2: 8 });
+      gl.push({ x1: -8, y1: k, x2: 8, y2: k });
+    }
+
+    const segs = [];
+    for (let i = 1; i < cents.length; i++) {
+      const a = cents[i - 1], b = cents[i];
+      const len = Math.hypot(b.x - a.x, b.y - a.y) || 0.001;
+      segs.push({
+        x1: a.x, y1: a.y, x2: b.x, y2: b.y,
+        dash: +len.toFixed(3),
+        offset: this.state.trailIn ? 0 : +len.toFixed(3),
+        delay: ((i - 1) * 260) + 'ms'
+      });
+    }
+
+    return {
+      bins, centroids: cents, gridLines: gl, netKm, maxKm,
+      trailSegs: segs,
+      solidTrailOpacity: this.state.trailDone ? 0 : 1,
+      dottedTrailOpacity: this.state.trailDone ? 1 : 0,
+      trailRef: this.trailRef,
+      trailPath: cents.length ? cents.map((c, i) => (i ? 'L' : 'M') + c.x + ' ' + c.y).join(' ') : '',
+      activeLabel: labels[act],
+      activeN: ns[act].toLocaleString(),
+      playLabel: this.state.playing ? 'Pause' : 'Play timeline',
+      theme: this.state.theme,
+      setTheme: this.setTheme,
+      progress: this.state.progress,
+      togglePlay: this.togglePlay,
+      leadRef: this.ref('lead'),
+      leadBoxRef: this.ref('leadBox'),
+      chipRef: this.ref('chip'),
+      muteRef: this.muteRef,
+      pxRef: this.pxRef,
+      revealRef: this.revealRef,
+      barsRef: this.barsRef,
+      countRef: this.countRef,
+      quoteRef: el => {
+        if (!el || el.__io) return;
+        el.__io = new IntersectionObserver(es => {
+          es.forEach(e => { if (e.isIntersecting) { el.style.opacity = '1'; el.style.transform = 'translateY(0)'; } });
+        }, { threshold: 0.5 });
+        el.__io.observe(el);
+      }
+    };
+  }
+}
+
+</script>
+</body>
+</html>
