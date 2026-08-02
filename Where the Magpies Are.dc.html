@@ -19,7 +19,7 @@
 <script src="_ds/wilderness-design-system-185038eb-b7a4-4231-9fcc-dc208eef8707/_ds_bundle.js"></script>
 <script src="data/density.js"></script>
 <style>
-  html, body { margin:0; padding:0; background:var(--surface-bg); overflow-x:hidden; transition:background 420ms cubic-bezier(.4,0,.2,1); }
+  html, body { margin:0; padding:0; background:var(--surface-bg); transition:background 420ms cubic-bezier(.4,0,.2,1); }
   body { -webkit-font-smoothing:antialiased; }
   a { color:var(--text-accent); text-decoration:none; border-bottom:1px solid var(--accent-primary); transition:color 150ms cubic-bezier(.4,0,.2,1), border-color 150ms cubic-bezier(.4,0,.2,1); }
   a:hover { color:var(--text-primary); border-bottom-color:var(--text-primary); }
@@ -31,7 +31,7 @@
 
 <template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" fill="#0d1117"/><circle cx="256" cy="256" r="126" fill="none" stroke="#c9a86a" stroke-width="10"/><text x="256" y="298" text-anchor="middle" font-family="Georgia, serif" font-size="132" fill="#f4f1ea">UO</text></svg></template>
 
-<div style="background:var(--surface-bg); color:var(--text-secondary); font-family:var(--font-serif); transition:background 420ms cubic-bezier(.4,0,.2,1)">
+<div style="background:var(--surface-bg); color:var(--text-secondary); font-family:var(--font-serif); transition:background 420ms cubic-bezier(.4,0,.2,1); overflow-x:hidden">
 
   <!-- FLOATING CHROME -->
   <div style="position:fixed; top:clamp(12px,2.5vw,22px); right:clamp(12px,2.5vw,22px); z-index:40; display:flex; align-items:center; gap:12px">
@@ -501,7 +501,10 @@ class Component extends DCLogic {
     };
     hush();
     ['loadedmetadata', 'loadeddata', 'canplay', 'play', 'playing', 'volumechange'].forEach(ev => el.addEventListener(ev, hush));
-    el.play().catch(() => {});
+    const go = () => el.play().catch(() => {});
+    go();
+    // mobile browsers can refuse the first autoplay; retry on the first touch
+    ['touchstart', 'click'].forEach(ev => document.addEventListener(ev, go, { once: true, passive: true }));
   };
 
   setTheme = t => {
