@@ -17,11 +17,13 @@ magpie moved," it's "the range looks stable and the sightings exploded."
 | Page | URL | Source |
 | --- | --- | --- |
 | The story | https://magpie-story.vercel.app/ | this repo, deployed to Vercel — the local-assets variant, so the videos are served same-origin |
-| The story + technical note | https://s19835.github.io/magpie_range_shift/ | this repo, GitHub Pages |
-| The technical note, standalone | https://s19835.github.io/range-shift/ | [`s19835/range-shift`](https://github.com/s19835/range-shift) — the same page copied out as `index.html` |
+| The technical note | https://range-shift.vercel.app/ | this repo, deployed to Vercel |
+| Both, on GitHub Pages | https://s19835.github.io/magpie_range_shift/ | this repo |
+| The technical note, standalone on Pages | https://s19835.github.io/range-shift/ | [`s19835/range-shift`](https://github.com/s19835/range-shift) — the same page copied out as `index.html` |
 
 Some mobile carrier networks reset browser TLS connections to `*.github.io` — the whole
-domain, not this site. The Vercel URL is the fallback if the Pages links won't open.
+domain, not these sites. The Vercel URLs are the fallback if the Pages links won't open;
+the two deployments serve the same pages from the same data.
 
 ## What's in this repo
 
